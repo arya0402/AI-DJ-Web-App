@@ -18,6 +18,11 @@ function draw() {
     fill("#FF0000");
     stroke("#FF0000");
     circle(leftWristX, leftWristY, 20);
+    numberLeftWristY = Number(leftWristY);
+    remove_decimal = floor(numberLeftWristY);
+    volume = remove_decimal/500;
+    document.getElementById("volume").innerHTML = "Volume = " + volume;
+    song.setVolume(volume);
 }
 
 function preload() {
