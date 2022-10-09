@@ -15,6 +15,9 @@ function setup() {
 
 function draw() {
     image(video, 0, 0, 500, 500);
+    fill("#FF0000");
+    stroke("#FF0000");
+    circle(leftWristX, leftWristY, 20);
 }
 
 function preload() {
