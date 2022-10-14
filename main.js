@@ -3,7 +3,6 @@ leftWristX = 0;
 leftWristY = 0;
 rightWristX = 0;
 rightWristY = 0;
-score_leftWrist = 0;
 
 function setup() {
     canvas = createCanvas(500, 500);
@@ -35,14 +34,12 @@ function draw() {
         document.getElementById("speed").innerHTML = "Speed = 2x";
         song.rate(2);
     }
-    if(score_leftWrist > 0.2) {
         circle(leftWristX, leftWristY, 20);
         numberLeftWristY = Number(leftWristY);
         remove_decimal = floor(numberLeftWristY);
         volume = remove_decimal/500;
         document.getElementById("volume").innerHTML = "Volume = " + volume;
         song.setVolume(volume);
-    }
 }
 
 function preload() {
